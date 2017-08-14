@@ -48,6 +48,7 @@ def getProfileBasic(tag):
     soup = parseURL(tag, element='profile')
     basic = soup.find('div', {'class':'statistics__userInfo'})
     stats = {}
+    print(soup)
     print(basic)
     level = basic.find('span', {'class':'statistics__userLevel'}).get_text()
     stats[u'level'] = int(level)
